@@ -32,7 +32,7 @@ public class EmailController {
                 .toList();
 
         return """
-               ✅ All emails processed!
+               All emails processed!
                -----------------------------
                %s
                """.formatted(String.join("\n", results));
