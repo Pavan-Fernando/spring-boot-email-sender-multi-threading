@@ -47,7 +47,7 @@ public class EmailServiceImpl implements EmailService {
 
             mailSender.send(message);
 
-            log.error("HTML email sent successfully to: " + email);
+            log.error("HTML email sent successfully to: {}", email);
             return CompletableFuture.completedFuture("Sent to " + email);
         } catch (Exception e) {
             log.error("Failed to send email to: {} | {}", email, e.getMessage());
