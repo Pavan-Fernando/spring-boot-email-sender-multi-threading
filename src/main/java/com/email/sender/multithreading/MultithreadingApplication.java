@@ -2,8 +2,12 @@ package com.email.sender.multithreading;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableAsync;
 
-@SpringBootApplication
+@SpringBootApplication(exclude = {
+		org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration.class
+})
+@EnableAsync
 public class MultithreadingApplication {
 
 	public static void main(String[] args) {

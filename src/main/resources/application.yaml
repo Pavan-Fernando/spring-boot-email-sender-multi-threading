@@ -1,3 +1,5 @@
-spring:
-  application:
-    name: multithreading
+server:
+  port: 8088
+
+base-url:
+  context: /email-sender/backend/api/v1
